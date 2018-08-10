@@ -1,0 +1,15 @@
+all_groups:
+  - name: 'develper'
+    gid: 1001
+  - name: 'admin'
+    gid: 1000
+create_per_user_group: true
+all_users:
+  - userName: 'userNameToLogin'
+    uid: 4000
+    name: 'User Name'
+    create_home_dir: yes
+    keyFilePath: 
+      - ~/.ssh/id_rsa.pub
+delete_users:
+  - userName: 'userNameToLogin'

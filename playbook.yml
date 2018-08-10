@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+  vars_files:
+    - data.yml
+  tasks:
+    - include: groups.yml groups_to_create={{ all_groups }}
+    - include: users.yml users={{ all_users }}
+    - include: delete_users.yml users_to_delete={{ delete_users }}
